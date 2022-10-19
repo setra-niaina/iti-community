@@ -93,8 +93,11 @@ export class UserProfileModalComponent implements OnInit {
 
   open() {
     this.model = new UserProfileForm(this.user);
-    this.form.resetForm(this.model);
     this.isVisible = true;
+
+    setTimeout(() => {
+      this.form.resetForm(this.model);
+    })
   }
 
   close() {
