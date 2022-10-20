@@ -41,5 +41,6 @@ export class UserRegistrationComponent implements OnInit {
 
   goToLogin() {
     // TODO rediriger l'utilisateur sur "/splash/login"
+    this.router.navigate(['/splash/login']);
   }
 }
