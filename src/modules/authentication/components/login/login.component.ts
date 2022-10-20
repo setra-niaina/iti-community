@@ -31,6 +31,15 @@ export class LoginComponent implements OnInit {
 
   goToRegistration() {
     // TODO naviguer vers "/splash/register"
+    // const navigationDetails: string[] = ['/splash/register'];
+    // if($myParam.length) {
+    //   navigationDetails.push($myParam);
+    // }
+    // this.router.navigate(navigationDetails);
+    console.log('here on goToRegistration');
+    
+    this.router.navigate(['/splash/register']);
+  
   }
 
   submit() {
