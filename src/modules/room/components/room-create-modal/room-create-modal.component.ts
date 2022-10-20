@@ -39,8 +39,8 @@ export class RoomCreateModalComponent implements OnInit {
   }
 
   open() {
-    this.form.resetForm(new CreateRoomFormModel());
     this.isVisible = true;
+    setTimeout(() => this.form.resetForm(new CreateRoomFormModel()))
   }
 
   close() {
