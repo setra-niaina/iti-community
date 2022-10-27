@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NzMessageService } from "ng-zorro-antd/message";
 import { UserService } from '../../services/user.service';
 
 class UserRegistrationFormModel {
@@ -22,7 +23,8 @@ export class UserRegistrationComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
+    private nzMessageService: NzMessageService
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +42,7 @@ export class UserRegistrationComponent implements OnInit {
     this.userService.search(this.model.username).then((resp) => {
       for (let i = 0; i < resp.length; i++) {
         if (resp[i].username === this.model.username) {
-          console.log("nmom d'utilisateur déjà pris");
+          this.nzMessageService.error("Le nom d'utilisateur est déjà pris");
           break;
         }
         else {

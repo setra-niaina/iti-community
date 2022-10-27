@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     // TODO naviguer vers "/splash/register"
     console.log('here on goToRegistration');
     this.router.navigate(['/splash/register']);
-  
+
   }
 
   submit() {
@@ -47,7 +47,11 @@ export class LoginComponent implements OnInit {
 
     try {
       // TODO vérifier le résultat de l'authentification. Rediriger sur "/" en cas de succès ou afficher une erreur en cas d'échec
-      await this.authService.authenticate(this.model.username, this.model.password);
+      const resp = await this.authService.authenticate(this.model.username, this.model.password);
+      // console.log(resp);
+      if( resp.success === true) {
+        this.router.navigate(['/']);
+      }
 
     } catch (e) {
       this.nzMessageService.error("Une erreur est survenue. Veuillez réessayer plus tard");
