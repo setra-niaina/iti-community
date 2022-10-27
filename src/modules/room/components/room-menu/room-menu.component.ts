@@ -29,7 +29,7 @@ export class RoomMenuComponent implements OnInit {
 
   goToRoom(room: Room) {
     // TODO naviguer vers app/[id de la room]
-    // this.router.navigate(['app/' + room.id + '']);
+    // this.router.navigate(['app', room.id]);
     this.router.navigateByUrl('app/' + room.id + '');
   }
 }
