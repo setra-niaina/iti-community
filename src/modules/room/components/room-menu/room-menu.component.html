@@ -13,7 +13,7 @@
   <div *ngFor="let room of rooms" class="room-meanu-header">
     <h3>{{ room.name }}</h3>
     <!-- TODO  -->
-    <button nz-button nzType="default" nzGhost>
+    <button nz-button nzType="default" nzGhost (click)="goToRoom(room)">
       <i nz-icon nzType="plus"></i>
     </button>
   </div>
