@@ -11,11 +11,11 @@
     Remplacer [id de la room] par l'id de la room itérée
   -->
   <div *ngFor="let room of rooms" class="room-meanu-header">
-    <!-- TODO  -->
     <button nz-button nzType="default" nzGhost (click)="goToRoom(room)">
       {{ room.name }}
     </button>
   </div>
+  <!-- TODO  -->
   <div
     class="menu-item"
     [ngClass]="{ selected: (roomId$ | async) === '[id de la room]' }"
