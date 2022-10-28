@@ -37,8 +37,6 @@ export class RoomCreateModalComponent implements OnInit {
       this.roomService.create(this.model.name, this.model.type);
       this.router.navigate(['app/default']);
       this.close();
-
-
     }
   }
 

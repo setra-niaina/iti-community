@@ -11,10 +11,9 @@
     Remplacer [id de la room] par l'id de la room itérée
   -->
   <div *ngFor="let room of rooms" class="room-meanu-header">
-    <h3>{{ room.name }}</h3>
     <!-- TODO  -->
     <button nz-button nzType="default" nzGhost (click)="goToRoom(room)">
-      <i nz-icon nzType="plus"></i>
+      {{ room.name }}
     </button>
   </div>
   <div

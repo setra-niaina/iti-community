@@ -4,14 +4,14 @@
       <nz-form-label nzFor="username">Username</nz-form-label>
       <nz-form-control>
         <input class="ant-input" type="text" name="username" id="username" [(ngModel)]="model.username"
-          #username="ngModel">
+          #username="ngModel" required>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>
       <nz-form-label nzFor="password">Mot de passe</nz-form-label>
       <nz-form-control>
         <input class="ant-input" type="password" name="password" id="password" [(ngModel)]="model.password"
-          #password="ngModel">
+          #password="ngModel" required>
       </nz-form-control>
     </nz-form-item>
 
@@ -19,7 +19,7 @@
       <nz-form-label nzFor="confirm-password">Confirmation du mot de passe</nz-form-label>
       <nz-form-control>
         <input class="ant-input" type="password" name="confirm-password" id="confirm-password"
-          [(ngModel)]="model.confirmPassword" #confirm="ngModel">
+          [(ngModel)]="model.confirmPassword" #confirm="ngModel" required>
       </nz-form-control>
     </nz-form-item>
     <nz-form-item>

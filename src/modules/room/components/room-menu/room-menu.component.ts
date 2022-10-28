@@ -30,6 +30,7 @@ export class RoomMenuComponent implements OnInit {
   goToRoom(room: Room) {
     // TODO naviguer vers app/[id de la room]
     // this.router.navigate(['app', room.id]);
+    localStorage.setItem("lastRoomIdSelected", room.id);
     this.router.navigateByUrl('app/' + room.id + '');
   }
 }
